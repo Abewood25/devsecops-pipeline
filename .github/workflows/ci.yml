@@ -27,3 +27,9 @@ jobs:
 
       - name: Run automated tests
         run: python -m pytest
+
+              - name: Install Bandit
+        run: pip install bandit
+
+      - name: Run Bandit SAST security scan
+        run: bandit -r app
