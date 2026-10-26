@@ -34,3 +34,10 @@ jobs:
 
       - name: Run Bandit SAST security scan
         run: bandit -r app
+
+
+      - name: Install pip-audit
+        run: pip install pip-audit
+
+      - name: Scan Python dependencies
+        run: pip-audit -r requirements.txt
