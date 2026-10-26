@@ -25,10 +25,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      
       - name: Run automated tests
         run: python -m pytest
 
-              - name: Install Bandit
+      - name: Install Bandit
         run: pip install bandit
 
       - name: Run Bandit SAST security scan
